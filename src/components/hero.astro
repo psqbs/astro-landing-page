@@ -1,18 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import heroImage from "~/assets/hero-image.jpg";
-
 const title = "Charity IT Conference";
 const tagline = "Empowering Change Through Technology";
 const date = "October 15-17, 2023";
 const location = "Tech Center, New York City";
+const dummyImage = "https://cdn.midjourney.com/9f5412ac-1d05-40c5-afed-a53658c2a9a8/0_0.png";
 ---
 
 <section class="relative h-full bg-black">
   <div class="absolute inset-0">
-    <Image
+    <img
       class="h-full w-full object-cover opacity-40"
-      src={heroImage}
+      src={dummyImage}
       alt="Charity IT Conference"
     />
   </div>
