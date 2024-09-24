@@ -4,10 +4,10 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Home", url: "#" },
+  { title: "Strona główna", url: "#" },
   { title: "Agenda", url: "#agenda" },
-  { title: "Presenters", url: "#presenters" },
-  { title: "Register", url: "#register" },
+  { title: "Prelegenci", url: "#presenters" },
+  { title: "Rejestracja", url: "#register" },
 ];
 ---
 
@@ -16,9 +16,9 @@ const navItems: Array<NavItem> = [
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Charity IT Conference</h1>
+    <h1 class="sr-only">Konferencja IT dla Dobroczynności</h1>
     <Icon name="mdi:charity" class="size-10" />
-    <span class="hidden text-xl font-bold sm:block">Charity IT Conference</span>
+    <span class="hidden text-xl font-bold sm:block">Konferencja IT dla Dobroczynności</span>
   </a>
   <div>
     <div class="flex items-center gap-6">
@@ -39,7 +39,7 @@ const navItems: Array<NavItem> = [
         id="open-nav-button"
         type="button"
         class="btn sm:hidden"
-        aria-label="Navigation"
+        aria-label="Nawigacja"
       >
         <Icon name="mdi:menu" class="size-8" />
       </button>
@@ -53,7 +53,7 @@ const navItems: Array<NavItem> = [
               id="close-nav-button"
               type="button"
               class="btn"
-              aria-label="Close navigation"
+              aria-label="Zamknij nawigację"
             >
               <Icon name="mdi:close" class="size-8" />
             </button>
