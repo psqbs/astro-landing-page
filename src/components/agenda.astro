@@ -1,57 +1,182 @@
 ---
 const agenda = [
   {
-    date: "27 listopada 2024",
-    events: [
-      { time: "16:00 - 17:00", title: "Otwarcie konferencji i wprowadzenie" },
-      { time: "17:00 - 18:00", title: "Wykład: Przyszłość technologii dla dobra społecznego" },
-      { time: "18:00 - 19:00", title: "Panel dyskusyjny: Technologia w służbie organizacji non-profit" },
-      { time: "19:00 - 20:00", title: "Networking i zakończenie pierwszego dnia" },
+    date: "27 listopada",
+    lectures: [
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 1
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 2
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 3
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 4
+      }
     ],
+    workshops: [
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 1
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 4
+      },
+    ],
+    totalSlots: 4
   },
   {
-    date: "28 listopada 2024",
-    events: [
-      { time: "16:00 - 17:00", title: "Warsztaty: Tworzenie dostępnych aplikacji internetowych" },
-      { time: "17:00 - 18:00", title: "Prezentacja: AI dla dobra społecznego" },
-      { time: "18:00 - 19:00", title: "Panel dyskusyjny: Cyberbezpieczeństwo dla organizacji charytatywnych" },
-      { time: "19:00 - 20:00", title: "Sesja innowacji: Prezentacje projektów technologicznych" },
+    date: "28 listopada",
+    lectures: [
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 1
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 2
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 3
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 4
+      },
     ],
+    workshops: [
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 1
+      },
+    ],
+    totalSlots: 4
   },
   {
-    date: "29 listopada 2024",
-    events: [
-      { time: "16:00 - 17:00", title: "Warsztaty: Analityka danych w mierzeniu wpływu społecznego" },
-      { time: "17:00 - 18:00", title: "Wykład: Blockchain dla transparentności w organizacjach charytatywnych" },
-      { time: "18:00 - 19:00", title: "Panel dyskusyjny: Rola technologii w reagowaniu kryzysowym" },
-      { time: "19:00 - 20:00", title: "Zakończenie konferencji i podsumowanie" },
+    date: "29 listopada",
+    lectures: [
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 1
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 2
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 3
+      },
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 4
+      },
     ],
+    workshops: [
+      { 
+        time: "tbd", 
+        title: "TBD", 
+        description: "TBD", 
+        slot: 1
+      },
+    ],
+    totalSlots: 6
   },
 ];
 ---
 
 <section id="agenda" class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-4 sm:gap-6">
-      <h2 class="text-4xl font-medium tracking-tight sm:text-5xl">Agenda Konferencji</h2>
-      <p class="text-primary text-base sm:text-lg">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 gap-4" style="grid-template-rows: repeat(20, auto);">
+      <h2 class="col-span-2 text-4xl font-medium tracking-tight sm:text-5xl text-center">Agenda Konferencji</h2>
+      <p class="col-span-2 text-primary text-base sm:text-lg text-center mb-8">
         Zapoznaj się z naszym harmonogramem wykładów, warsztatów i możliwości networkingowych.
       </p>
-    </div>
-    <div class="mt-10 space-y-10">
-      {agenda.map((day) => (
-        <div class="border-b border-primary/10 pb-10">
-          <h3 class="text-2xl font-semibold">{day.date}</h3>
-          <ul class="mt-4 space-y-4">
-            {day.events.map((event) => (
-              <li class="flex items-center gap-4 rounded-lg bg-offset p-4">
-                <div class="flex-none text-sm font-medium">{event.time}</div>
-                <div class="flex-auto font-medium">{event.title}</div>
-              </li>
+      <h3 class="text-2xl font-semibold text-secondary text-center">Wykłady i Panele</h3>
+      <h3 class="text-2xl font-semibold text-secondary text-center">Warsztaty</h3>
+
+      {agenda.map((day, dayIndex) => (
+        <>
+          <h4 class="col-span-2 text-xl font-semibold text-center py-4 text-text">{day.date}</h4>
+          <div class="grid grid-rows-{day.totalSlots} gap-2">
+            {Array.from({ length: day.totalSlots }).map((_, slotIndex) => (
+              <div class="bg-offset rounded-lg p-4 m-1">
+                {day.lectures.find(lecture => lecture.slot === slotIndex + 1) && (
+                  <div class="cursor-pointer" onclick={`toggleDescription('lecture-${dayIndex}-${slotIndex}')`}>
+                    <div class="text-sm font-medium text-primary">{day.lectures.find(lecture => lecture.slot === slotIndex + 1).time}</div>
+                    <div class="font-medium text-text">{day.lectures.find(lecture => lecture.slot === slotIndex + 1).title}</div>
+                    <div id={`lecture-${dayIndex}-${slotIndex}`} class="mt-2 text-sm hidden text-text-offset">
+                      {day.lectures.find(lecture => lecture.slot === slotIndex + 1).description}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
-          </ul>
-        </div>
+          </div>
+          <div class="grid grid-rows-{day.totalSlots} gap-2">
+            {Array.from({ length: day.totalSlots }).map((_, slotIndex) => (
+              <div class="bg-offset rounded-lg p-4 m-1">
+                {day.workshops.find(workshop => workshop.slot === slotIndex + 1) && (
+                  <div class="cursor-pointer" onclick={`toggleDescription('workshop-${dayIndex}-${slotIndex}')`}>
+                    <div class="text-sm font-medium text-primary">{day.workshops.find(workshop => workshop.slot === slotIndex + 1).time}</div>
+                    <div class="font-medium text-text">{day.workshops.find(workshop => workshop.slot === slotIndex + 1).title}</div>
+                    <div id={`workshop-${dayIndex}-${slotIndex}`} class="mt-2 text-sm hidden text-text-offset">
+                      {day.workshops.find(workshop => workshop.slot === slotIndex + 1).description}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </>
       ))}
     </div>
   </div>
 </section>
+
+<script>
+  function toggleDescription(id) {
+    const description = document.getElementById(id);
+    if (description) {
+      description.classList.toggle('hidden');
+    }
+  }
+</script>

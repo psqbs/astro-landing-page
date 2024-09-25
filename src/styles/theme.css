@@ -1,19 +1,84 @@
+/* Color definitions for both schemes */
+:root {
+  /* Dark theme colors */
+  --rosewaterDark: #f5e0dc;
+  --flamingoDark: #f2cdcd;
+  --pinkDark: #f5c2e7;
+  --mauveDark: #cba6f7;
+  --redDark: #f38ba8;
+  --maroonDark: #eba0ac;
+  --peachDark: #fab387;
+  --yellowDark: #f9e2af;
+  --greenDark: #a6e3a1;
+  --tealDark: #94e2d5;
+  --skyDark: #89dceb;
+  --sapphireDark: #74c7ec;
+  --blueDark: #89b4fa;
+  --lavenderDark: #b4befe;
+  --textDark: #cdd6f4;
+  --subtext1Dark: #bac2de;
+  --subtext0Dark: #a6adc8;
+  --overlay2Dark: #9399b2;
+  --overlay1Dark: #7f849c;
+  --overlay0Dark: #6c7086;
+  --surface2Dark: #585b70;
+  --surface1Dark: #45475a;
+  --surface0Dark: #313244;
+  --baseDark: #1e1e2e;
+  --mantleDark: #181825;
+  --crustDark: #11111b;
+
+  /* Light theme colors */
+  --rosewaterLight: #dc8a78;
+  --flamingoLight: #dd7878;
+  --pinkLight: #ea76cb;
+  --mauveLight: #8839ef;
+  --redLight: #d20f39;
+  --maroonLight: #e64553;
+  --peachLight: #fe640b;
+  --yellowLight: #df8e1d;
+  --greenLight: #40a02b;
+  --tealLight: #179299;
+  --skyLight: #04a5e5;
+  --sapphireLight: #209fb5;
+  --blueLight: #1e66f5;
+  --lavenderLight: #7287fd;
+  --textLight: #4c4f69;
+  --subtext1Light: #5c5f77;
+  --subtext0Light: #6c6f85;
+  --overlay2Light: #7c7f93;
+  --overlay1Light: #8c8fa1;
+  --overlay0Light: #9ca0b0;
+  --surface2Light: #acb0be;
+  --surface1Light: #bcc0cc;
+  --surface0Light: #ccd0da;
+  --baseLight: #eff1f5;
+  --mantleLight: #e6e9ef;
+  --crustLight: #dce0e8;
+}
+
 [data-theme="light"] {
   --color-primary: theme("colors.pink.500");
   --color-secondary: theme("colors.indigo.500");
-  --color-text: theme("colors.gray.900");
-  --color-text-offset: theme("colors.gray.600");
-  --color-background: theme("colors.gray.50");
-  --color-background-offset: theme("colors.gray.100");
-  --color-border: theme("colors.gray.900" / 10%);
+  --color-text: var(--textLight);
+  --color-text-offset: var(--subtext0Light);
+  --color-background: var(--baseLight);
+  --color-background-offset: var(--surface0Light);
+  --color-border: var(--overlay1Light);
 }
 
 [data-theme="dark"] {
   --color-primary: theme("colors.pink.400");
   --color-secondary: theme("colors.indigo.400");
-  --color-text: theme("colors.gray.50");
-  --color-text-offset: theme("colors.gray.400");
-  --color-background: theme("colors.gray.900");
-  --color-background-offset: theme("colors.gray.800");
-  --color-border: theme("colors.gray.50" / 10%);
+  --color-text: var(--textDark);
+  --color-text-offset: var(--subtext0Dark);
+  --color-background: var(--baseDark);
+  --color-background-offset: var(--surface0Dark);
+  --color-border: var(--overlay1Dark);
 }
+
+/* You can now use these variables in your components like this:
+   color: var(--color-text);
+   background-color: var(--color-background);
+   
+   The theme will automatically switch between light and dark based on the data-theme attribute. */

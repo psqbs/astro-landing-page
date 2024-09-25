@@ -26,39 +26,39 @@ const links: Array<FooterLink> = [
 ];
 ---
 
-<footer class="bg-primary text-white">
+<footer class="bg-surface text-text">
   <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <div>
-        <h3 class="text-lg font-semibold">O nas</h3>
-        <p class="mt-4 text-sm">
+        <h3 class="text-lg font-semibold text-primary">O nas</h3>
+        <p class="mt-4 text-sm text-text-offset">
           Konferencja IT dla Dobroczynności łączy ekspertów technologicznych i organizacje non-profit, aby wykorzystać technologię dla dobra społecznego.
         </p>
       </div>
       <div>
-        <h3 class="text-lg font-semibold">Szybkie linki</h3>
+        <h3 class="text-lg font-semibold text-primary">Szybkie linki</h3>
         <ul class="mt-4 space-y-2">
-          <li><a href="#" class="text-sm hover:underline">Strona główna</a></li>
-          <li><a href="#agenda" class="text-sm hover:underline">Agenda</a></li>
-          <li><a href="#presenters" class="text-sm hover:underline">Prelegenci</a></li>
-          <li><a href="#register" class="text-sm hover:underline">Rejestracja</a></li>
+          <li><a href="#" class="text-sm text-text-offset hover:text-secondary transition-colors duration-300">Strona główna</a></li>
+          <li><a href="#agenda" class="text-sm text-text-offset hover:text-secondary transition-colors duration-300">Agenda</a></li>
+          <li><a href="#presenters" class="text-sm text-text-offset hover:text-secondary transition-colors duration-300">Prelegenci</a></li>
+          <li><a href="#register" class="text-sm text-text-offset hover:text-secondary transition-colors duration-300">Rejestracja</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold">Kontakt</h3>
+        <h3 class="text-lg font-semibold text-primary">Kontakt</h3>
         <ul class="mt-4 space-y-2">
-          <li class="text-sm">Email: info@konferencjaitdobroczynnosc.pl</li>
-          <li class="text-sm">Telefon: +48 123 456 789</li>
-          <li class="text-sm">Adres: ul. Technologiczna 123, 00-001 Warszawa</li>
+          <li class="text-sm text-text-offset">Email: info@konferencjaitdobroczynnosc.pl</li>
+          <li class="text-sm text-text-offset">Telefon: +48 123 456 789</li>
+          <li class="text-sm text-text-offset">Adres: ul. Technologiczna 123, 00-001 Warszawa</li>
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold">Śledź nas</h3>
+        <h3 class="text-lg font-semibold text-primary">Śledź nas</h3>
         <ul class="mt-4 flex space-x-4">
           {links.map((link) => (
             <li>
               <a
-                class="flex size-8 items-center justify-center rounded-full border border-white hover:bg-white hover:text-primary"
+                class="flex size-8 items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-background transition-colors duration-300"
                 href={link.url}
               >
                 <span class="sr-only">{link.description}</span>
@@ -69,8 +69,8 @@ const links: Array<FooterLink> = [
         </ul>
       </div>
     </div>
-    <div class="mt-8 border-t border-white/10 pt-8 text-center">
-      <p class="text-sm">&copy; 2024 Konferencja IT dla Dobroczynności. Wszelkie prawa zastrzeżone.</p>
+    <div class="mt-8 border-t border-border pt-8 text-center">
+      <p class="text-sm text-text-offset">&copy; 2024 Konferencja IT dla Dobroczynności. Wszelkie prawa zastrzeżone.</p>
     </div>
   </div>
 </footer>
